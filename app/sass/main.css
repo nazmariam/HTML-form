@@ -1,0 +1,51 @@
+/*
+Error: Invalid CSS after "  background: ": expected expression (e.g. 1px, bold), was "#000000de url(...."
+        on line 33 of main.scss
+
+28:   float:left;
+29:   list-style-type:none;
+30:   margin: 0 10px;
+31: }
+32: .notification{
+33:   background: #000000de url(../images/sprite.png) 23px 865px;
+34:   width: 20px;
+35:   height: 20px;
+36:   opacity: .65;
+37:   border-radius: 50%;
+38:   display: block;
+
+Backtrace:
+main.scss:33
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:1278:in `expected'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/script/lexer.rb:231:in `expected!'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/script/parser.rb:724:in `assert_expr'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/script/parser.rb:68:in `parse'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:1134:in `sass_script'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:988:in `value!'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:796:in `block in try_declaration'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:1254:in `rethrow'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:809:in `try_declaration'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:732:in `declaration_or_ruleset'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:697:in `block_child'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:686:in `block_contents'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:678:in `block'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:670:in `ruleset'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:696:in `block_child'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:689:in `block_contents'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:137:in `stylesheet'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:41:in `parse'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/engine.rb:414:in `_to_tree'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/exec/sass_scss.rb:391:in `run'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/exec/base.rb:52:in `parse'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/lib/sass/exec/base.rb:19:in `parse!'
+/var/lib/gems/2.5.0/gems/sass-3.5.6/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"  background: \": expected expression (e.g. 1px, bold), was \"#000000de url(....\"\A         on line 33 of main.scss\A \A 28:   float:left;\A 29:   list-style-type:none;\A 30:   margin: 0 10px;\A 31: }\A 32: .notification{\A 33:   background: #000000de url(../images/sprite.png) 23px 865px;\A 34:   width: 20px;\A 35:   height: 20px;\A 36:   opacity: .65;\A 37:   border-radius: 50%;\A 38:   display: block;"; }

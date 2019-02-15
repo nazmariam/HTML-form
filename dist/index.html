@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML form</title>
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            go back
+            sign in
+        </nav>
+    </header>
+    <main>
+        <div class="form-container">
+            <form action="send.php" method="post" enctype="multipart/form-data">
+                <header>
+                    <nav class="your-order">
+                        <h3>Your order</h3>
+                        <ul>
+                            <li>
+                                <span>Items</span>
+                                <span>2 documents</span>
+                            </li>
+                            <li>
+                                <span>Details</span>
+                                <span>2 languages</span>
+                            </li>
+                            <li>
+                                <span>Price</span>
+                                <span>$ 696.06</span>
+                            </li>
+                            <li>
+                                <span>Delivery</span>
+                                <span>48 hours*</span>
+                            </li>
+                        </ul>
+                        <div class="buttons">
+                            <input type="submit"
+                                   value="Place order">
+                            <button>Print a quote</button>
+                        </div>
+                    </nav>
+                    <div class="help-center">
+                        <h3>Help center</h3>
+                        <p>If you need assistance while placing your order, contact one of our beloved Project Manager by phone or email.</p>
+                        <a href="tel:+9710555555">+971 (0) 555 555</a>
+                        <a href="mailto:help@qtest.com">help@qtest.com</a>
+                    </div>
+                </header>
+                <main>
+                    <h1>Select what you want to translate</h1>
+                    <fieldset>
+                        <label>
+                            <input type="radio"
+                                      name="doc-type"
+                                      value="website">
+                        </label>
+                        <label>
+                            <input type="radio"
+                                   name="doc-type"
+                                   value="documents"
+                                   checked>
+                        </label>
+                        <label>
+                            <input type="radio"
+                                   name="doc-type"
+                                   value="social account">
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <h2>Upload your documents <span>(Doc, Docx, Text, PDF, Markdown)</span></h2>
+                        <label>
+                            <input type="file"
+                                   name="file"
+                                   accept=".doc, .docx, .txt, .pdf, .md"
+                                   multiple
+                                   required>
+                            <span>Upload a new file</span>
+                        </label>
+                        <div class="file-list">
+                            <div class="list-header">
+                                <div class="file-name">
+                                    File name
+                                </div>
+                                <div class="file-size">
+                                    File size
+                                </div>
+                                <div class="file-words">
+                                    Number of words
+                                </div>
+                                <div class="file-remove">
+                                    Remove
+                                </div>
+                            </div>
+                            <div class="file-row">
+                                <div class="file-name">
+                                    business_operations.docx
+                                </div>
+                                <div class="file-size">
+                                    78kb
+                                </div>
+                                <div class="file-words">
+                                    842
+                                </div>
+                                <div class="file-remove">
+                                    <button class="del"></button>
+                                </div>
+                            </div>
+                            <div class="file-row">
+                                <div class="file-name">
+                                    business_financial.docx
+                                </div>
+                                <div class="file-size">
+                                    26kb
+                                </div>
+                                <div class="file-words">
+                                    2,326
+                                </div>
+                                <div class="file-remove">
+                                    <button class="del"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <h2>Choose your languages pairings</h2>
+                        <span>From</span>
+                        <label>
+                            <select name="from-lang"
+                                    required>
+                                <option value="english" selected>English</option>
+                                <option value="arabic">Arabic</option>
+                                <option value="kurdish">Kurdish</option>
+                            </select>
+                        </label>
+                        <span>to</span>
+                        <label>
+                            <select name="to-lang"
+                                    required>
+                                <option value="english">English</option>
+                                <option value="arabic" selected>Arabic</option>
+                                <option value="kurdish">Kurdish</option>
+                            </select>
+                        </label>
+                        <label>
+                            <select name="to-lang"
+                                    required>
+                                <option value="english">English</option>
+                                <option value="arabic">Arabic</option>
+                                <option value="kurdish" selected>Kurdish</option>
+                            </select>
+                        </label>
+                        <button class="del"></button>
+                        <button>+ add</button>
+                    </fieldset>
+                    <fieldset>
+                        <h2>Select your desired tone</h2>
+                        <label>
+                            <input type="radio"
+                                   name="desired-tone">
+                            Friendly / Casual
+                        </label>
+                        <label>
+                            <input type="radio"
+                                   name="desired-tone"
+                                   checked>
+                            Corporate / Pro
+                        </label>
+                        <label>
+                            <input type="radio"
+                                   name="desired-tone">
+                            Media / Formal
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <h2>Tell us how urgent this job is</h2>
+                        <label>
+                            <input type="range"
+                                   name="urgent"
+                                   min="0"
+                                   max="2"
+                                   step="1"
+                                   value="1">
+                        </label>
+                        <div class="timeline-info">
+                            <h4>Timeline info</h4>
+                            <p>With an average timeline set up, our expert translator can take a reasonable amount of time perfecting your translation</p>
+                        </div>
+                    </fieldset>
+                    <section>
+                        <h2>Sign up and choose a payment method</h2>
+                        <h5>Already have an account with us? <a href="#">Sign in</a>.</h5>
+                        <span>Full name</span>
+                        <label>
+                            <input type="text"
+                                   name="user-name"
+                                   id="user-name"
+                                   placeholder="Your name"
+                                   title="Write your name. Min length 2"
+                                   minlength="2"
+                                   required>
+                        </label>
+                        <span>Email address</span>
+                        <label>
+                            <input type="email"
+                                   id="user-email"
+                                   name="user-email"
+                                   placeholder="example@domaine.com"
+                                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                   title="name@domain.etc"
+                                   required>
+                        </label>
+                        <span>Choose a password</span>
+                        <label>
+                            <input type="password"
+                                   id="user-password"
+                                   name="user-password"
+                                   placeholder="Enter your password"
+                                   pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*"
+                                   title="Minimum 8 characters, UPPERCASE, lowercase and Number"
+                                   minlength="8"
+                                   required>
+                        </label>
+                        <fieldset>
+                            <label>
+                                <input type="radio"
+                                       name="payment">
+                                <span class="payment-img">
+                                    <img src="" alt="">
+                                </span>
+                            </label>
+                            <label>
+                                <input type="radio"
+                                       name="payment"
+                                       checked>
+                                <span class="payment-img">
+                                    <img src="" alt="">
+                                </span>
+                            </label>
+                            <label>
+                                <input type="radio"
+                                       name="payment">
+                                <span class="payment-img">
+                                    <img src="" alt="">
+                                </span>
+                            </label>
+                        </fieldset>
+                        <label>
+                            <input type="text"
+                                   inputmode="numeric"
+                                   name="card-number"
+                                   id="card-number"
+                                   placeholder="0123-4567-8910-1112"
+                                   pattern="\b\d{4}(| |-)\d{4}\1\d{4}\1\d{4}\b"
+                                   minlength="16"
+                                   maxlength="16"
+                                   title="16 digits"
+                                   required>
+                            <span class="card-number">visa</span>
+                        </label>
+                        <label>
+                            <input type="date"
+                                   name="date"
+                                   id="date"
+                                   placeholder="YYYY/MM/DD"
+                                   title="Please, enter date"
+                                   required >
+                            <span>Expiry date</span>
+                        </label>
+                        <label>
+                            <input type="text"
+                                   inputmode="numeric"
+                                   name="code"
+                                   id="code"
+                                   placeholder="0123"
+                                   pattern="\b\d{3}"
+                                   minlength="3"
+                                   maxlength="3"
+                                   title="Your CVV code"
+                                   required>
+                        </label>
+                    </section>
+                    <section class="accept">
+                        <label>
+                            <input type="checkbox"
+                                   name="agreement"
+                                   id="agreement"
+                                   checked
+                                   required>
+                            <span>I agree to the <a href="#">Terms & Conditions</a></span>
+                        </label>
+                        <div class="buttons">
+                            <input type="submit"
+                                   value="Place order">
+                            <button>Print a quote</button>
+                        </div>
+                    </section>
+                </main>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
