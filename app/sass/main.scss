@@ -1,6 +1,6 @@
 @import url('normalize.scss');
 body{
-  background-color: lightgrey;
+  background-color: #d1d1d1;
 }
 .form-container{
   background-color: #fff;
@@ -14,6 +14,57 @@ body{
 }
 
 
+.text:focus:invalid ~ .fa-window-close,
+.email:focus:invalid ~ .fa-window-close,
+.password:focus:invalid ~ .fa-window-close,
+.code:focus:invalid ~ .fa-window-close,
+.card-number:focus:invalid ~ .fa-window-close,
+.date:focus:invalid~ .fa-window-close {
+  display: inline;
+  position: absolute;
+  color: #f00;
+  font-size: 1.2em;
+  top: 2px;
+  right: 4px;
+  background: transparent;
+}
+.text:focus:valid ~ .fa-check-circle,
+.email:focus:valid ~ .fa-check-circle,
+.password:focus:valid ~ .fa-check-circle,
+.number:focus:valid ~ .fa-check-circle,
+.code:focus:valid ~ .fa-check-circle,
+.code:valid ~ .fa-check-circle,
+.card-number:valid ~ .fa-check-circle,
+.password:valid ~ .fa-check-circle,
+.text:valid ~ .fa-check-circle,
+.email:valid ~ .fa-check-circle {
+  display: inline;
+  position: absolute;
+  color: green;
+  font-size: 1.2em;
+  top: 2px;
+  right: 4px;
+  background-color: transparent;
+}
+.username{
+
+}
+.card-label,
+.code-label,
+.date-label,
+.email-label,
+.password-label,
+.username-label{
+  position: relative;
+}
+.fa, .fas{
+  display: none;
+}
+
+
+.text::after{
+
+}
 
 @media (min-width: 576px) {
   .form-container {

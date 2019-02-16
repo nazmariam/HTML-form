@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>HTML form</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
@@ -12,7 +13,7 @@
             sign in
         </nav>
     </header>
-    <main>
+    <div class="wrapper">
         <div class="form-container">
             <form action="send.php" method="post" enctype="multipart/form-data">
                 <header>
@@ -130,7 +131,12 @@
                         <label>
                             <select name="from-lang"
                                     required>
-                                <option value="english" selected>English</option>
+                                <option value=""
+                                        disabled
+                                        selected>
+                                    Select language
+                                </option>
+                                <option value="english">English</option>
                                 <option value="arabic">Arabic</option>
                                 <option value="kurdish">Kurdish</option>
                             </select>
@@ -139,17 +145,27 @@
                         <label>
                             <select name="to-lang"
                                     required>
+                                <option value=""
+                                        disabled
+                                        selected>
+                                    Select language
+                                </option>
                                 <option value="english">English</option>
-                                <option value="arabic" selected>Arabic</option>
+                                <option value="arabic">Arabic</option>
                                 <option value="kurdish">Kurdish</option>
                             </select>
                         </label>
                         <label>
                             <select name="to-lang"
                                     required>
+                                <option value=""
+                                        disabled
+                                        selected>
+                                    Select language
+                                </option>
                                 <option value="english">English</option>
                                 <option value="arabic">Arabic</option>
-                                <option value="kurdish" selected>Kurdish</option>
+                                <option value="kurdish">Kurdish</option>
                             </select>
                         </label>
                         <button class="del"></button>
@@ -192,97 +208,129 @@
                     <section>
                         <h2>Sign up and choose a payment method</h2>
                         <h5>Already have an account with us? <a href="#">Sign in</a>.</h5>
-                        <span>Full name</span>
-                        <label>
+                        <div class="username">
+                            <label class="username-label">
+                            <span>Full name</span>
                             <input type="text"
                                    name="user-name"
+                                   class="text"
                                    id="user-name"
                                    placeholder="Your name"
                                    title="Write your name. Min length 2"
                                    minlength="2"
                                    required>
-                        </label>
-                        <span>Email address</span>
-                        <label>
-                            <input type="email"
-                                   id="user-email"
-                                   name="user-email"
-                                   placeholder="example@domaine.com"
-                                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                                   title="name@domain.etc"
-                                   required>
-                        </label>
-                        <span>Choose a password</span>
-                        <label>
-                            <input type="password"
-                                   id="user-password"
-                                   name="user-password"
-                                   placeholder="Enter your password"
-                                   pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*"
-                                   title="Minimum 8 characters, UPPERCASE, lowercase and Number"
-                                   minlength="8"
-                                   required>
-                        </label>
-                        <fieldset>
-                            <label>
-                                <input type="radio"
-                                       name="payment">
-                                <span class="payment-img">
-                                    <img src="" alt="">
-                                </span>
+                                <i class="fas fa-window-close"></i>
+                                <i class="fas fa-check-circle"></i>
                             </label>
-                            <label>
-                                <input type="radio"
-                                       name="payment"
-                                       checked>
-                                <span class="payment-img">
-                                    <img src="" alt="">
-                                </span>
+                        </div>
+                        <div class="email-address">
+                            <label class="email-label">
+                                <span>Email address</span>
+                                <input type="email"
+                                       class="email"
+                                       id="user-email"
+                                       name="user-email"
+                                       placeholder="example@domaine.com"
+                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                       title="name@domain.etc"
+                                       required>
+                                <i class="fas fa-window-close"></i>
+                                <i class="fas fa-check-circle"></i>
                             </label>
-                            <label>
-                                <input type="radio"
-                                       name="payment">
-                                <span class="payment-img">
-                                    <img src="" alt="">
-                                </span>
+                        </div>
+                        <div class="users-password">
+                            <label class="password-label">
+                                <span>Choose a password</span>
+                                <input type="password"
+                                       class="password"
+                                       id="user-password"
+                                       name="user-password"
+                                       placeholder="Enter your password"
+                                       pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*"
+                                       title="Minimum 8 characters, UPPERCASE, lowercase and Number"
+                                       minlength="8"
+                                       required>
+                                <i class="fas fa-window-close"></i>
+                                <i class="fas fa-check-circle"></i>
                             </label>
-                        </fieldset>
-                        <label>
-                            <input type="text"
-                                   inputmode="numeric"
-                                   name="card-number"
-                                   id="card-number"
-                                   placeholder="0123-4567-8910-1112"
-                                   pattern="\b\d{4}(| |-)\d{4}\1\d{4}\1\d{4}\b"
-                                   minlength="16"
-                                   maxlength="16"
-                                   title="16 digits"
-                                   required>
-                            <span class="card-number">visa</span>
-                        </label>
-                        <label>
-                            <input type="date"
-                                   name="date"
-                                   id="date"
-                                   placeholder="YYYY/MM/DD"
-                                   title="Please, enter date"
-                                   required >
-                            <span>Expiry date</span>
-                        </label>
-                        <label>
-                            <input type="text"
-                                   inputmode="numeric"
-                                   name="code"
-                                   id="code"
-                                   placeholder="0123"
-                                   pattern="\b\d{3}"
-                                   minlength="3"
-                                   maxlength="3"
-                                   title="Your CVV code"
-                                   required>
-                        </label>
+                        </div>
+                        <div class="payment-method">
+                            <fieldset>
+                                <label>
+                                    <input type="radio"
+                                           name="payment">
+                                    <span class="payment-img">
+                                    <img src="images/visa.jpg" alt="">
+                                </span>
+                                </label>
+                                <label>
+                                    <input type="radio"
+                                           name="payment"
+                                           checked>
+                                    <span class="payment-img">
+                                    <img src="images/paypal.jpg" alt="">
+                                </span>
+                                </label>
+                                <label>
+                                    <input type="radio"
+                                           name="payment">
+                                    <span class="payment-img">
+                                    <img src="images/amazon.jpg" alt="">
+                                </span>
+                                </label>
+                            </fieldset>
+                        </div>
+                        <div class="payment-card">
+                            <label class="card-label">
+                                <span class="card-number">visa</span>
+                                <input type="text"
+                                       inputmode="numeric"
+                                       name="card-number"
+                                       class="card-number"
+                                       id="card-number"
+                                       placeholder="0123-4567-8910-1112"
+                                       pattern="\b\d{4}(| |-)\d{4}\1\d{4}\1\d{4}\b"
+                                       minlength="16"
+                                       maxlength="16"
+                                       title="16 digits"
+                                       required>
+                                <i class="fas fa-window-close"></i>
+                                <i class="fas fa-check-circle"></i>
+
+                            </label>
+                        </div>
+                        <div class="card-date">
+                            <label class="date-label">
+                                <input type="date"
+                                       name="date"
+                                       class="date"
+                                       id="date"
+                                       title="Please, enter date"
+                                       required >
+                                <span>Expiry date</span>
+                            </label>
+                        </div>
+                        <div class="card-code">
+                            <label class="code-label">
+                                <span>Code</span>
+                                <input type="text"
+                                       inputmode="numeric"
+                                       name="code"
+                                       class="code"
+                                       id="code"
+                                       placeholder="123"
+                                       pattern="\b\d{3}"
+                                       minlength="3"
+                                       maxlength="3"
+                                       title="Your CVV code"
+                                       required>
+                                <i class="fas fa-window-close"></i>
+                                <i class="fas fa-check-circle"></i>
+
+                            </label>
+                        </div>
                     </section>
-                    <section class="accept">
+                    <div class="accept">
                         <label>
                             <input type="checkbox"
                                    name="agreement"
@@ -296,10 +344,10 @@
                                    value="Place order">
                             <button>Print a quote</button>
                         </div>
-                    </section>
+                    </div>
                 </main>
             </form>
         </div>
-    </main>
+    </div>
 </body>
 </html>

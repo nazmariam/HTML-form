@@ -17,7 +17,7 @@ function style() {
 }
 function watch(){
     livereload.listen();
-    gulp.watch('dist/css/', style)
+    gulp.watch('app/sass/', style)
 }
 
 function images() {
