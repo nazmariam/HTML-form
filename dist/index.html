@@ -16,60 +16,88 @@
     <div class="wrapper">
         <div class="form-container">
             <form action="send.php" method="post" enctype="multipart/form-data">
-                <header>
-                    <nav class="your-order">
-                        <h3>Your order</h3>
-                        <ul>
-                            <li>
-                                <span>Items</span>
-                                <span>2 documents</span>
-                            </li>
-                            <li>
-                                <span>Details</span>
-                                <span>2 languages</span>
-                            </li>
-                            <li>
-                                <span>Price</span>
-                                <span>$ 696.06</span>
-                            </li>
-                            <li>
-                                <span>Delivery</span>
-                                <span>48 hours*</span>
-                            </li>
-                        </ul>
+                <header class="form-header">
+                    <nav class="order-nav">
+                        <div class="order-info">
+                            <h3 class="your-order">Your order</h3>
+                            <ul class="order-list">
+                                <li class="order-item">
+                                    <span class="order-item-header">Items</span>
+                                    <span class="order-item-info">2 documents</span>
+                                </li>
+                                <li class="order-item">
+                                    <span class="order-item-header">Details</span>
+                                    <span class="order-item-info">2 languages</span>
+                                </li>
+                                <li class="order-item">
+                                    <span class="order-item-header">Price</span>
+                                    <span class="order-item-info">$ 696.06</span>
+                                </li>
+                                <li class="order-item">
+                                    <span class="order-item-header">Delivery</span>
+                                    <span class="order-item-info">48 hours*</span>
+                                </li>
+                            </ul>
+                        </div>
+
                         <div class="buttons">
                             <input type="submit"
+                                   class="order form-button"
                                    value="Place order">
-                            <button>Print a quote</button>
+                            <button class="print form-button">Print a quote</button>
                         </div>
                     </nav>
                     <div class="help-center">
-                        <h3>Help center</h3>
-                        <p>If you need assistance while placing your order, contact one of our beloved Project Manager by phone or email.</p>
-                        <a href="tel:+9710555555">+971 (0) 555 555</a>
-                        <a href="mailto:help@qtest.com">help@qtest.com</a>
+                        <h3 class="help-title">Help center</h3>
+                        <p class="help-text">If you need assistance while placing your order, contact one of our beloved Project Manager by phone or email.</p>
+                        <div class="help-links">
+                            <a href="tel:+9710555555">+971 (0) 555 555</a>
+                            <a href="mailto:help@qtest.com">help@qtest.com</a>
+                        </div>
                     </div>
                 </header>
-                <main>
-                    <h1>Select what you want to translate</h1>
-                    <fieldset>
-                        <label>
-                            <input type="radio"
-                                      name="doc-type"
-                                      value="website">
-                        </label>
-                        <label>
-                            <input type="radio"
-                                   name="doc-type"
-                                   value="documents"
-                                   checked>
-                        </label>
-                        <label>
-                            <input type="radio"
-                                   name="doc-type"
-                                   value="social account">
-                        </label>
-                    </fieldset>
+                <main class="main-form">
+                    <div class="container">
+                        <h1 class="main-title">Select what you want to translate</h1>
+                    </div>
+                    <div class="first-area">
+                        <div class="container">
+                            <label>
+                                <input type="radio"
+                                       class="doc-type visually-hidden"
+                                       name="doc-type"
+                                       value="website">
+                                <span class="type-button">
+                                <img src="images/website.png" alt="website type">
+                                <span>Website</span>
+                            </span>
+                            </label>
+                            <label>
+                                <input type="radio"
+                                       class="visually-hidden"
+                                       name="doc-type"
+                                       value="documents"
+                                       checked>
+                                <span class="type-button">
+                                <img src="images/documents.png" alt="document type">
+                                <span>Documents</span>
+                            </span>
+                            </label>
+                            <label>
+                                <input type="radio"
+                                       class="visually-hidden"
+                                       name="doc-type"
+                                       value="social account">
+                                <span class="type-button">
+                                <img src="images/social.png" alt="social account type">
+                                <span>Social Account</span>
+                            </span>
+                            </label>
+                        </div>
+                    </div>
+
+
+
                     <fieldset>
                         <h2>Upload your documents <span>(Doc, Docx, Text, PDF, Markdown)</span></h2>
                         <label>

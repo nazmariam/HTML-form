@@ -1,16 +1,162 @@
-@import url('normalize.scss');
+@import 'normalize';
+
+$mainColor: #5f667b;
+$mainColorLight: #a4abc5;
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
 body{
   background-color: #d1d1d1;
+  color: $mainColor;
 }
+
+//------------------form header------------------------------
+
+
 .form-container{
   background-color: #fff;
-  border: 1px solid grey;
-  border-radius: 2px;
+  border: 2px solid $mainColorLight;
+  border-radius: 4px;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+.form-header{
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 2px solid $mainColorLight;
+ }
+.order-nav{
+  flex: 0 0 65%;
+  display: flex;
+  border-right: 2px solid $mainColorLight;
+  margin-right: -2px;
+  box-sizing: border-box;
+  padding: 32px;
+  justify-content: space-between;
+}
+.order-info{
+  flex: 0 0 70%;
+}
+.your-order{
+  padding-left: 28px;
+  position: relative;
+}
+.your-order::before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: $mainColor;
+  -webkit-mask-image: url(../images/011-list.svg);
+  mask-image: url(../images/011-list.svg);
+}
+.order-list{
+  display: flex;
+  padding: 0;
+  justify-content: space-around;
+}
+.order-item{
+  display: flex;
+  flex-direction: column;
+}
+.order-item-header{
+  margin: 8px 0;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.order-item-info{
+  color: $mainColorLight;
+}
+.buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form-button{
+  padding: 16px 24px;
+  background-color: #f7f7fa;
+  border: 1px solid $mainColorLight;
+  color: $mainColorLight;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.print{
+  margin: 16px 0 0;
+}
+.order{
+  background-color: #5fcac6;
+  border-color: #53aca9;
+  color: #fff;
+}
+.help-center{
+  flex: 0 0 35%;
+  padding: 32px 32px 32px 54px;
+  box-sizing: border-box;
+}
+.help-title{
+  font-weight: bolder;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.help-links a{
+  text-decoration: none;
+  color: $mainColor;
+  font-weight: 600;
+  margin-right: 24px;
+}
+.help-title::before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: -28px;
+  width: 20px;
+  height: 20px;
+  background-color: $mainColor;
+  -webkit-mask-image: url(../images/001-help.svg);
+  mask-image: url(../images/001-help.svg);
+}
+.help-text{
+  color:$mainColorLight;
+  padding: 16px 0;
+}
+
+//------------------form header END--------------------------
+//------------------main-------------------------------------
+.container{
+  padding: 32px;
+}
+.main-form{
+  padding: 32px;
+}
+.main-title{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+.first-area .container{
+  display: flex;
+}
+.type-button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: grey;
+  padding: 16px 32px;
+  cursor: pointer;
 }
 
 
