@@ -19,7 +19,18 @@ body{
   background-color: #d1d1d1;
   color: $mainColor;
 }
-
+a{
+  color:$mainColor;
+  &:hover{
+    text-decoration: none;
+  }
+  &:visited{
+    color:$mainColor;
+  }
+}
+fieldset{
+  border: none;
+}
 //------------------form header------------------------------
 
 
@@ -179,7 +190,7 @@ body{
   position: absolute;
   color: #75a7e1;
   font-size: 1.6em;
-  top: -14px;
+  top: -12px;
   right: -14px;
   background-color: #fff;
   border-radius: 50%;
@@ -310,35 +321,53 @@ body{
 }
 
 //----------------------------------third area END----------------------
+//----------------------------------fourth area-------------------------
+.fourth-fifth{
+  display: flex;
+}
+.fourth-fieldset{
+  display: flex;
+  flex-direction: column;
+}
+.fourth-area .fourth-but
+{
+  padding: 32px;
+  margin: 0 0 24px;
+}
+.fourth-area .fourth-but:hover,
+.fourth-area .inp-type:checked ~ .type-button.fourth-but{
+  margin: -7px -7px 17px;
+}
+//----------------------------------fourth area END---------------------
 
 
-
-
-
-
-
-
+//----------------------------------fifth area------------------------
+.email-address,
+.users-password{
+  display: inline-block;
+  margin: 24px 24px 0 0;
+}
+.signin, .signin-link, .signin-link:visited{
+  color: $mainColorLight;
+}
+.text, .email, .password{
+  min-width: 300px;
+}
 .text:focus:invalid ~ .fa-window-close,
 .email:focus:invalid ~ .fa-window-close,
-.password:focus:invalid ~ .fa-window-close,
-.code:focus:invalid ~ .fa-window-close,
-.card-number:focus:invalid ~ .fa-window-close,
-.date:focus:invalid~ .fa-window-close {
+.password:focus:invalid ~ .fa-window-close{
   display: inline;
   position: absolute;
-  color: #f00;
-  font-size: 1.2em;
-  top: 2px;
-  right: 4px;
-  background: transparent;
+  color: red;
+  font-size: 1.4em;
+  bottom: 0;
+  right: 9px;
+  background: 0 0;
+  top: unset;
 }
 .text:focus:valid ~ .fa-check-circle,
 .email:focus:valid ~ .fa-check-circle,
 .password:focus:valid ~ .fa-check-circle,
-.number:focus:valid ~ .fa-check-circle,
-.code:focus:valid ~ .fa-check-circle,
-.code:valid ~ .fa-check-circle,
-.card-number:valid ~ .fa-check-circle,
 .password:valid ~ .fa-check-circle,
 .text:valid ~ .fa-check-circle,
 .email:valid ~ .fa-check-circle {
@@ -346,12 +375,159 @@ body{
   position: absolute;
   color: green;
   font-size: 1.2em;
-  top: 2px;
-  right: 4px;
+  top: unset;
+  right: 9px;
   background-color: transparent;
+  bottom: 1px;
 }
-.username{
+//----------------------------------fifth area END--------------------
+//----------------------------------sixth area------------------------
+input::-webkit-input-placeholder{
+  color:$mainColorLight;
+}
+.payment-method .container{
+  display: flex;
+  justify-content: space-between;
+}
+.card-data .container{
+  display: flex;
+  justify-content: space-between;
+}
+.payment-card{
+  flex: 0 0 45%;
+  margin-right: 20px;
+}
+.card-date{
+  flex: 0 0 30%;
+  margin-right: 20px;
+}
+.card-label,
+.date-label,
+.code-label{
+  display: flex;
+  flex-direction: column;
+}
+.text,
+.email,
+.password,
+.code,
+.card-number,
+.date {
+  position: relative;
+  min-width: 100px;
+  margin-top: 5px;
+  height: 50px;
+  padding: 5px 15px 5px 15px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid $mainColorLighter;
+  font-size: 15px;
+  outline: transparent;
+  background-color: transparent;
+  color: $mainColor;
+}
+.card-number{
+  background: url("../images/visa.svg") 95% 50% no-repeat;
+  background-size: 32px;
+}
+.card-number:valid,
+.card-number:focus,
+.card-number:focus:valid {
+  background: transparent;
+}
+input[type="date"]:before {
+  content: attr(placeholder);
+  color: $mainColorLight;
+  margin-left: 3em;
+  background-color: #fff;
+  width: 100%;
+}
+input[type="date"]:focus:before,
+input[type="date"]:valid:before {
+  content: "";
+  width: 0;
+  margin-left: 0;
+}
+.accept .container{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.accept .buttons{
+  flex-direction: row;
+}
+.print{
+  margin: auto;
+}
+.order{
+  margin: 0 24px;
+}
+.checkbox-label {
+  display: block;
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+.agreement {
+  display: none;
+}
+.checkbox-label:before {
+  content: "\2714";
+  border: 0.1em solid $mainColorLight;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 1.2em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: .2s;
+}
+.checkbox-label:active:before {
+  transform: scale(0);
+}
+.agreement:checked + .checkbox-label:before {
+  background-color: #fff;
+  border-color: $mainColorLight;
+  color: $mainColor;
+}
+.agreement:disabled ~ .checkbox-label:before {
+  transform: scale(1);
+  border-color: #aaa;
+}
 
+.agreement:checked:disabled ~ .checkbox-label:before {
+  transform: scale(1);
+  background-color: #bfb;
+  border-color: #bfb;
+}
+
+.code:focus:invalid ~ .fa-window-close,
+.card-number:focus:invalid ~ .fa-window-close,
+.date:focus:invalid~ .fa-window-close {
+  display: inline;
+  position: absolute;
+  color: red;
+  font-size: 1.4em;
+  bottom: 16px;
+  right: 9px;
+  background: 0 0;
+  top: unset;
+}
+.card-number:focus:valid ~ .fa-check-circle,
+.code:focus:valid ~ .fa-check-circle,
+.code:valid ~ .fa-check-circle,
+.card-number:valid ~ .fa-check-circle {
+  display: inline;
+  position: absolute;
+  color: green;
+  font-size: 1.2em;
+  top: unset;
+  right: 9px;
+  background-color: transparent;
+  bottom: 16px;
 }
 .card-label,
 .code-label,
@@ -365,10 +541,9 @@ body{
   display: none;
 }
 
+//----------------------------------sixth area END----------------------
 
-.text::after{
 
-}
 
 @media (min-width: 576px) {
   .form-container {

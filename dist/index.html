@@ -69,9 +69,9 @@
                                        value="website">
                                 <i class="fas fa-check-circle"></i>
                                 <span class="type-button">
-                                <img class="type-img" src="images/website.png" alt="website type">
-                                <span>Website</span>
-                            </span>
+                                    <img class="type-img" src="images/website.png" alt="website type">
+                                    <span>Website</span>
+                                </span>
                             </label>
                             <label class="type-label">
                                 <input type="radio"
@@ -81,9 +81,9 @@
                                        checked>
                                 <i class="fas fa-check-circle"></i>
                                 <span class="type-button">
-                                <img class="type-img" src="images/documents.png" alt="document type">
-                                <span>Documents</span>
-                            </span>
+                                    <img class="type-img" src="images/documents.png" alt="document type">
+                                    <span>Documents</span>
+                                </span>
                             </label>
                             <label class="type-label">
                                 <input type="radio"
@@ -92,15 +92,12 @@
                                        value="social account">
                                 <i class="fas fa-check-circle"></i>
                                 <span class="type-button">
-                                <img class="type-img" src="images/social.png" alt="social account type">
-                                <span>Social Account</span>
-                            </span>
+                                    <img class="type-img" src="images/social.png" alt="social account type">
+                                    <span>Social Account</span>
+                                </span>
                             </label>
                         </div>
                     </div>
-
-
-
                     <div class="second-area">
                         <h2 class="area-title"><span class="title-number">1</span>Upload your documents <span>(Doc, Docx, Text, PDF, Markdown)</span></h2>
                         <div class="container">
@@ -159,7 +156,6 @@
                             </div>
                         </div>
                         </div>
-
                     <div class="third-area">
                         <h2 class="area-title"><span class="title-number">2</span>Choose your languages pairings</h2>
                         <div class="container">
@@ -218,178 +214,221 @@
                         </div>
 
                     </div>
-                    <fieldset>
-                        <h2 class="area-title">Select your desired tone</h2>
-                        <label>
-                            <input type="radio"
-                                   name="desired-tone">
-                            Friendly / Casual
-                        </label>
-                        <label>
-                            <input type="radio"
-                                   name="desired-tone"
-                                   checked>
-                            Corporate / Pro
-                        </label>
-                        <label>
-                            <input type="radio"
-                                   name="desired-tone">
-                            Media / Formal
-                        </label>
-                    </fieldset>
-                    <fieldset>
-                        <h2 class="area-title">Tell us how urgent this job is</h2>
-                        <label>
-                            <input type="range"
-                                   name="urgent"
-                                   min="0"
-                                   max="2"
-                                   step="1"
-                                   value="1">
-                        </label>
-                        <div class="timeline-info">
-                            <h4>Timeline info</h4>
-                            <p>With an average timeline set up, our expert translator can take a reasonable amount of time perfecting your translation</p>
+                    <section class="fourth-fifth">
+                        <div class="fourth-area">
+                            <h2 class="area-title"><span class="title-number">3</span>Select your desired tone</h2>
+                            <div class="container">
+                                <fieldset class="fourth-fieldset">
+                                    <label class="type-label">
+                                        <input type="radio"
+                                               class="inp-type visually-hidden"
+                                               name="desired-tone">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span class="type-button fourth-but">Friendly&nbsp;&sol;&nbsp;Casual</span>
+                                    </label>
+                                    <label class="type-label">
+                                        <input type="radio"
+                                               class="inp-type visually-hidden"
+                                               name="desired-tone"
+                                               checked>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span class="type-button fourth-but">Corporate&nbsp;&sol;&nbsp;Pro</span>
+                                    </label>
+                                    <label class="type-label">
+                                        <input type="radio"
+                                               class="inp-type visually-hidden"
+                                               name="desired-tone">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span class="type-button fourth-but">Media&nbsp;&sol;&nbsp;Formal</span>
+                                    </label>
+                                </fieldset>
+                            </div>
+
                         </div>
-                    </fieldset>
-                    <section>
-                        <h2 class="area-title">Sign up and choose a payment method</h2>
-                        <h5>Already have an account with us? <a href="#">Sign in</a>.</h5>
-                        <div class="username">
-                            <label class="username-label">
-                            <span>Full name</span>
-                            <input type="text"
-                                   name="user-name"
-                                   class="text"
-                                   id="user-name"
-                                   placeholder="Your name"
-                                   title="Write your name. Min length 2"
-                                   minlength="2"
-                                   required>
-                                <i class="fas fa-window-close"></i>
-                                <i class="fas fa-check-circle"></i>
-                            </label>
+                        <div class="fifth-area">
+                            <div class="container">
+                                <fieldset>
+                                    <h2 class="area-title">Tell us how urgent this job is</h2>
+                                    <label>
+                                        <input type="range"
+                                               name="urgent"
+                                               min="0"
+                                               max="2"
+                                               step="1"
+                                               value="1">
+                                    </label>
+                                    <div class="timeline-info">
+                                        <h4>Timeline info</h4>
+                                        <p>With an average timeline set up, our expert translator can take a reasonable amount of time perfecting your translation</p>
+                                    </div>
+                                </fieldset>
+                            </div>
                         </div>
-                        <div class="email-address">
-                            <label class="email-label">
-                                <span>Email address</span>
-                                <input type="email"
-                                       class="email"
-                                       id="user-email"
-                                       name="user-email"
-                                       placeholder="example@domaine.com"
-                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                                       title="name@domain.etc"
-                                       required>
-                                <i class="fas fa-window-close"></i>
-                                <i class="fas fa-check-circle"></i>
-                            </label>
+
+                    </section>
+
+                    <section class="sixth-area">
+                        <h2 class="area-title"><span class="title-number">5</span>Sign up and choose a payment method</h2>
+                        <div class="container">
+                            <h5 class="signin">Already have an account with us? <a class="signin-link" href="#">Sign in</a>.</h5>
+                            <div class="username">
+                                <label class="username-label">
+                                    <span class="list-header">Full name</span>
+                                    <input type="text"
+                                           name="user-name"
+                                           class="text"
+                                           id="user-name"
+                                           placeholder="Your name"
+                                           title="Write your name. Min length 2"
+                                           minlength="2"
+                                           required>
+                                    <i class="fas fa-window-close"></i>
+                                    <i class="fas fa-check-circle"></i>
+                                </label>
+                            </div>
+                            <div class="email-address">
+                                <label class="email-label">
+                                    <span class="list-header">Email address</span>
+                                    <input type="email"
+                                           class="email"
+                                           id="user-email"
+                                           name="user-email"
+                                           placeholder="example@domaine.com"
+                                           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                           title="name@domain.etc"
+                                           required>
+                                    <i class="fas fa-window-close"></i>
+                                    <i class="fas fa-check-circle"></i>
+                                </label>
+                            </div>
+                            <div class="users-password">
+                                <label class="password-label">
+                                    <span class="list-header">Choose a password</span>
+                                    <input type="password"
+                                           class="password"
+                                           id="user-password"
+                                           name="user-password"
+                                           placeholder="Enter your password"
+                                           pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*"
+                                           title="Minimum 8 characters, UPPERCASE, lowercase and Number"
+                                           minlength="8"
+                                           required>
+                                    <i class="fas fa-window-close"></i>
+                                    <i class="fas fa-check-circle"></i>
+                                </label>
+                            </div>
                         </div>
-                        <div class="users-password">
-                            <label class="password-label">
-                                <span>Choose a password</span>
-                                <input type="password"
-                                       class="password"
-                                       id="user-password"
-                                       name="user-password"
-                                       placeholder="Enter your password"
-                                       pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*"
-                                       title="Minimum 8 characters, UPPERCASE, lowercase and Number"
-                                       minlength="8"
-                                       required>
-                                <i class="fas fa-window-close"></i>
-                                <i class="fas fa-check-circle"></i>
-                            </label>
-                        </div>
+
                         <div class="payment-method">
-                            <fieldset>
-                                <label>
-                                    <input type="radio"
-                                           name="payment">
-                                    <span class="payment-img">
-                                    <img src="images/visa.jpg" alt="">
-                                </span>
-                                </label>
-                                <label>
-                                    <input type="radio"
-                                           name="payment"
-                                           checked>
-                                    <span class="payment-img">
-                                    <img src="images/paypal.jpg" alt="">
-                                </span>
-                                </label>
-                                <label>
-                                    <input type="radio"
-                                           name="payment">
-                                    <span class="payment-img">
-                                    <img src="images/amazon.jpg" alt="">
-                                </span>
-                                </label>
-                            </fieldset>
-                        </div>
-                        <div class="payment-card">
-                            <label class="card-label">
-                                <span class="card-number">visa</span>
-                                <input type="text"
-                                       inputmode="numeric"
-                                       name="card-number"
-                                       class="card-number"
-                                       id="card-number"
-                                       placeholder="0123-4567-8910-1112"
-                                       pattern="\b\d{4}(| |-)\d{4}\1\d{4}\1\d{4}\b"
-                                       minlength="16"
-                                       maxlength="16"
-                                       title="16 digits"
-                                       required>
-                                <i class="fas fa-window-close"></i>
-                                <i class="fas fa-check-circle"></i>
+                            <div class="container">
 
-                            </label>
-                        </div>
-                        <div class="card-date">
-                            <label class="date-label">
-                                <input type="date"
-                                       name="date"
-                                       class="date"
-                                       id="date"
-                                       title="Please, enter date"
-                                       required >
-                                <span>Expiry date</span>
-                            </label>
-                        </div>
-                        <div class="card-code">
-                            <label class="code-label">
-                                <span>Code</span>
-                                <input type="text"
-                                       inputmode="numeric"
-                                       name="code"
-                                       class="code"
-                                       id="code"
-                                       placeholder="123"
-                                       pattern="\b\d{3}"
-                                       minlength="3"
-                                       maxlength="3"
-                                       title="Your CVV code"
-                                       required>
-                                <i class="fas fa-window-close"></i>
-                                <i class="fas fa-check-circle"></i>
+                                    <label class="type-label">
+                                        <input type="radio"
+                                               class="inp-type visually-hidden"
+                                               name="payment">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span class="type-button">
+                                            <img class="type-img" src="images/visa.jpg" alt="">
+                                        </span>
+                                    </label>
+                                    <label class="type-label">
+                                        <input type="radio"
+                                               class="inp-type visually-hidden"
+                                               name="payment"
+                                               checked>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span class="type-button">
+                                        <img class="type-img" src="images/paypal.jpg" alt="">
+                                    </span>
 
-                            </label>
+                                    </label>
+                                    <label class="type-label">
+                                        <input type="radio"
+                                               class="inp-type visually-hidden"
+                                               name="payment">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span class="type-button">
+                                        <img class="type-img" src="images/amazon.jpg" alt="">
+                                    </span>
+                                    </label>
+
+                            </div>
+
                         </div>
+
+                        <div class="card-data">
+                            <div class="container">
+                                <div class="payment-card">
+                                    <label class="card-label">
+                                        <span class="card-number-title list-header">Card number</span>
+                                        <input type="text"
+                                               inputmode="numeric"
+                                               name="card-number"
+                                               class="card-number"
+                                               id="card-number"
+                                               placeholder="0123-4567-8910-1112"
+                                               pattern="\b\d{4}(| |-)\d{4}\1\d{4}\1\d{4}\b"
+                                               minlength="16"
+                                               maxlength="16"
+                                               title="16 digits"
+                                               required>
+                                        <i class="fas fa-window-close"></i>
+                                        <i class="fas fa-check-circle"></i>
+                                    </label>
+
+
+                                </div>
+                                <div class="card-date">
+                                    <label class="date-label">
+                                        <span class="list-header">Expiry date</span>
+                                        <input type="date"
+                                               name="date"
+                                               class="date"
+                                               id="date"
+                                               placeholder="Please, enter date"
+                                               title="Please, enter date"
+                                               required >
+                                    </label>
+                                </div>
+                                <div class="card-code">
+                                    <label class="code-label">
+                                        <span class="list-header">Code</span>
+                                        <input type="text"
+                                               inputmode="numeric"
+                                               name="code"
+                                               class="code"
+                                               id="code"
+                                               placeholder="123"
+                                               pattern="\b\d{3}"
+                                               minlength="3"
+                                               maxlength="3"
+                                               title="Your CVV code"
+                                               required>
+                                        <i class="fas fa-window-close"></i>
+                                        <i class="fas fa-check-circle"></i>
+
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
                     </section>
                     <div class="accept">
-                        <label>
-                            <input type="checkbox"
-                                   name="agreement"
-                                   id="agreement"
-                                   checked
-                                   required>
-                            <span>I agree to the <a href="#">Terms & Conditions</a></span>
-                        </label>
-                        <div class="buttons">
-                            <input type="submit"
-                                   value="Place order">
-                            <button>Print a quote</button>
+                        <div class="container">
+
+                                <input type="checkbox"
+                                       name="agreement"
+                                       class="agreement"
+                                       id="agreement"
+                                       required>
+
+                            <label for="agreement"  class="checkbox-label"><span>I agree to the <a class="terms" href="#">Terms & Conditions</a></span></label>
+                            <div class="buttons">
+                                <input type="submit"
+                                       class="form-button order"
+                                       value="Place order">
+                                <button class="form-button print">Print a quote</button>
+                            </div>
                         </div>
                     </div>
                 </main>
