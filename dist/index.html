@@ -224,7 +224,7 @@
                                                class="inp-type visually-hidden"
                                                name="desired-tone">
                                         <i class="fas fa-check-circle"></i>
-                                        <span class="type-button fourth-but">Friendly&nbsp;&sol;&nbsp;Casual</span>
+                                        <span class="type-button fourth-but fourth-but-casual">Friendly&nbsp;&sol;&nbsp;Casual</span>
                                     </label>
                                     <label class="type-label">
                                         <input type="radio"
@@ -232,37 +232,41 @@
                                                name="desired-tone"
                                                checked>
                                         <i class="fas fa-check-circle"></i>
-                                        <span class="type-button fourth-but">Corporate&nbsp;&sol;&nbsp;Pro</span>
+                                        <span class="type-button fourth-but fourth-but-pro">Corporate&nbsp;&sol;&nbsp;Pro</span>
                                     </label>
                                     <label class="type-label">
                                         <input type="radio"
                                                class="inp-type visually-hidden"
                                                name="desired-tone">
                                         <i class="fas fa-check-circle"></i>
-                                        <span class="type-button fourth-but">Media&nbsp;&sol;&nbsp;Formal</span>
+                                        <span class="type-button fourth-but fourth-but-formal">Media&nbsp;&sol;&nbsp;Formal</span>
                                     </label>
                                 </fieldset>
                             </div>
 
                         </div>
                         <div class="fifth-area">
-                            <div class="container">
-                                <fieldset>
-                                    <h2 class="area-title">Tell us how urgent this job is</h2>
-                                    <label>
-                                        <input type="range"
-                                               name="urgent"
-                                               min="0"
-                                               max="2"
-                                               step="1"
-                                               value="1">
-                                    </label>
-                                    <div class="timeline-info">
-                                        <h4>Timeline info</h4>
-                                        <p>With an average timeline set up, our expert translator can take a reasonable amount of time perfecting your translation</p>
-                                    </div>
-                                </fieldset>
-                            </div>
+                            <fieldset>
+                                <h2 class="area-title"><span class="title-number">4</span>Tell us how urgent this job is</h2>
+                                <label class="range-label">
+                                    <input type="range"
+                                           class="urgent"
+                                           name="urgent"
+                                           min="0"
+                                           max="2"
+                                           step="1"
+                                           value="1">
+                                </label>
+                                <div class="urgent-titles">
+                                    <span>I got time</span>
+                                    <span class="orange">Average</span>
+                                    <span>Yesterday</span>
+                                </div>
+                                <div class="timeline-info">
+                                    <h4 class="info-title">Timeline info</h4>
+                                    <p>With an <span class="orange">AVERAGE</span>  timeline set up, our expert translator can take a reasonable amount of time perfecting your translation</p>
+                                </div>
+                            </fieldset>
                         </div>
 
                     </section>
