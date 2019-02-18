@@ -2,6 +2,7 @@
 
 $mainColor: #5f667b;
 $mainColorLight: #a4abc5;
+$mainColorLighter: #d6d8df;
 
 .visually-hidden {
   position: absolute;
@@ -92,6 +93,7 @@ body{
   border-radius: 4px;
   font-weight: 600;
   text-transform: uppercase;
+  display: inline-block;
 }
 .print{
   margin: 16px 0 0;
@@ -137,7 +139,7 @@ body{
 //------------------form header END--------------------------
 //------------------main-------------------------------------
 .container{
-  padding: 32px;
+  padding: 32px 64px;
 }
 .main-form{
   padding: 32px;
@@ -147,17 +149,104 @@ body{
   text-transform: uppercase;
   font-size: 24px;
 }
+
+//----------------------------first area-------------------------------
 .first-area .container{
   display: flex;
+  justify-content: space-between;
+}
+.type-label{
+  position: relative;
 }
 .type-button{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: grey;
-  padding: 16px 32px;
+  background-color: #f7f7fa;
+  padding: 32px 96px;
   cursor: pointer;
+  border: 1px solid $mainColorLighter;
+  border-radius: 4px;
 }
+.type-button:hover,
+.inp-type:checked ~ .type-button {
+  border: 8px solid #75a7e1;
+  border-radius: 4px;
+  margin: -7px;
+}
+.inp-type:checked ~ .fa-check-circle{
+  display: inline;
+  position: absolute;
+  color: #75a7e1;
+  font-size: 1.6em;
+  top: -14px;
+  right: -14px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.type-img{
+  width: 96px;
+}
+//--------------------------------first area END-----------------------
+//----------------------------------second area--------------------------
+.second-area{
+  margin: 56px 0;
+}
+.area-title{
+  font-size: 28px;
+  font-weight: 400;
+}
+.title-number{
+  border: 1px solid $mainColor;
+  padding: 10px 18px;
+  border-radius: 50%;
+  margin: 0 15px 0 0;
+}
+.file-button{
+  text-transform: inherit;
+  margin: 24px 0;
+  position: relative;
+  padding-left: 56px;
+}
+.file-button::before{
+  position: absolute;
+  content: '';
+  top: 13px;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: $mainColorLight;
+  -webkit-mask-image: url(../images/002-upload.svg);
+  mask-image: url(../images/002-upload.svg);
+}
+.file-list{
+  display: flex;
+  flex-direction: column;
+}
+.list-header,
+.file-row{
+  display: flex;
+  flex-direction: row;
+}
+.file-name{
+  flex:0 0 33%
+}
+.file-size{
+  flex: 0 0 24%;
+}
+.file-words{
+  flex: 0 0 24%;
+}
+.file-remove{
+  flex: 0 0 19%;
+}
+//----------------------------------second area END----------------------
+
+
+
+
+
+
 
 
 .text:focus:invalid ~ .fa-window-close,

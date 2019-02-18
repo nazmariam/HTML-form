@@ -62,34 +62,37 @@
                     </div>
                     <div class="first-area">
                         <div class="container">
-                            <label>
+                            <label class="type-label">
                                 <input type="radio"
-                                       class="doc-type visually-hidden"
+                                       class="inp-type visually-hidden"
                                        name="doc-type"
                                        value="website">
+                                <i class="fas fa-check-circle"></i>
                                 <span class="type-button">
-                                <img src="images/website.png" alt="website type">
+                                <img class="type-img" src="images/website.png" alt="website type">
                                 <span>Website</span>
                             </span>
                             </label>
-                            <label>
+                            <label class="type-label">
                                 <input type="radio"
-                                       class="visually-hidden"
+                                       class="inp-type visually-hidden"
                                        name="doc-type"
                                        value="documents"
                                        checked>
+                                <i class="fas fa-check-circle"></i>
                                 <span class="type-button">
-                                <img src="images/documents.png" alt="document type">
+                                <img class="type-img" src="images/documents.png" alt="document type">
                                 <span>Documents</span>
                             </span>
                             </label>
-                            <label>
+                            <label class="type-label">
                                 <input type="radio"
-                                       class="visually-hidden"
+                                       class="inp-type visually-hidden"
                                        name="doc-type"
                                        value="social account">
+                                <i class="fas fa-check-circle"></i>
                                 <span class="type-button">
-                                <img src="images/social.png" alt="social account type">
+                                <img class="type-img" src="images/social.png" alt="social account type">
                                 <span>Social Account</span>
                             </span>
                             </label>
@@ -98,63 +101,67 @@
 
 
 
-                    <fieldset>
-                        <h2>Upload your documents <span>(Doc, Docx, Text, PDF, Markdown)</span></h2>
-                        <label>
-                            <input type="file"
-                                   name="file"
-                                   accept=".doc, .docx, .txt, .pdf, .md"
-                                   multiple
-                                   required>
-                            <span>Upload a new file</span>
-                        </label>
-                        <div class="file-list">
-                            <div class="list-header">
-                                <div class="file-name">
-                                    File name
+                    <div class="second-area">
+                        <h2 class="area-title"><span class="title-number">1</span>Upload your documents <span>(Doc, Docx, Text, PDF, Markdown)</span></h2>
+                        <div class="container">
+                            <label class="file-label">
+                                <input type="file"
+                                       class="visually-hidden"
+                                       name="file"
+                                       accept=".doc, .docx, .txt, .pdf, .md"
+                                       multiple
+                                       required>
+                                <span class="file-button form-button">Upload a new file</span>
+                            </label>
+                            <div class="file-list">
+                                <div class="list-header">
+                                    <div class="file-name">
+                                        File name
+                                    </div>
+                                    <div class="file-size">
+                                        File size
+                                    </div>
+                                    <div class="file-words">
+                                        Number of words
+                                    </div>
+                                    <div class="file-remove">
+                                        Remove
+                                    </div>
                                 </div>
-                                <div class="file-size">
-                                    File size
+                                <div class="file-row">
+                                    <div class="file-name">
+                                        business_operations.docx
+                                    </div>
+                                    <div class="file-size">
+                                        78kb
+                                    </div>
+                                    <div class="file-words">
+                                        842
+                                    </div>
+                                    <div class="file-remove">
+                                        <button class="del"></button>
+                                    </div>
                                 </div>
-                                <div class="file-words">
-                                    Number of words
-                                </div>
-                                <div class="file-remove">
-                                    Remove
-                                </div>
-                            </div>
-                            <div class="file-row">
-                                <div class="file-name">
-                                    business_operations.docx
-                                </div>
-                                <div class="file-size">
-                                    78kb
-                                </div>
-                                <div class="file-words">
-                                    842
-                                </div>
-                                <div class="file-remove">
-                                    <button class="del"></button>
-                                </div>
-                            </div>
-                            <div class="file-row">
-                                <div class="file-name">
-                                    business_financial.docx
-                                </div>
-                                <div class="file-size">
-                                    26kb
-                                </div>
-                                <div class="file-words">
-                                    2,326
-                                </div>
-                                <div class="file-remove">
-                                    <button class="del"></button>
+                                <div class="file-row">
+                                    <div class="file-name">
+                                        business_financial.docx
+                                    </div>
+                                    <div class="file-size">
+                                        26kb
+                                    </div>
+                                    <div class="file-words">
+                                        2,326
+                                    </div>
+                                    <div class="file-remove">
+                                        <button class="del"></button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </fieldset>
+                        </div>
+
                     <fieldset>
-                        <h2>Choose your languages pairings</h2>
+                        <h2 class="area-title">Choose your languages pairings</h2>
                         <span>From</span>
                         <label>
                             <select name="from-lang"
@@ -200,7 +207,7 @@
                         <button>+ add</button>
                     </fieldset>
                     <fieldset>
-                        <h2>Select your desired tone</h2>
+                        <h2 class="area-title">Select your desired tone</h2>
                         <label>
                             <input type="radio"
                                    name="desired-tone">
@@ -219,7 +226,7 @@
                         </label>
                     </fieldset>
                     <fieldset>
-                        <h2>Tell us how urgent this job is</h2>
+                        <h2 class="area-title">Tell us how urgent this job is</h2>
                         <label>
                             <input type="range"
                                    name="urgent"
@@ -234,7 +241,7 @@
                         </div>
                     </fieldset>
                     <section>
-                        <h2>Sign up and choose a payment method</h2>
+                        <h2 class="area-title">Sign up and choose a payment method</h2>
                         <h5>Already have an account with us? <a href="#">Sign in</a>.</h5>
                         <div class="username">
                             <label class="username-label">
