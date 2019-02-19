@@ -48,6 +48,7 @@ fieldset{
   margin-right: auto;
   margin-left: auto;
   box-sizing: border-box;
+  max-width: 1140px;
 }
 .form-header{
   display: flex;
@@ -655,56 +656,61 @@ input[type="date"]:valid:before {
 }
 
 //----------------------------------sixth area END----------------------
+@media only screen and (max-width: 768px) {
 
-
-
-@media (min-width: 768px) {
-  body{
-    //background: #fff;
-  }
   .form-container {
-    max-width: 100%;
+    max-width: 100vw;
   }
-  //.main-form{
-  //  padding: 32px 0;
-  //  box-sizing: border-box;
-  //}
-  //.form-header{
-  //  flex-direction: column;
-  //}
-  //.first-area .container{
-  //  flex-direction: column;
-  //  align-items: center;
-  //}
-  //.type-label{
-  //  margin: 24px 0;
-  //}
-  //.type-button{
-  //  padding: 45px 180px;
-  //}
-  //.type-img{
-  //  width: 240px;
-  //}
-  //.fourth-fifth{
-  //  flex-direction: column;
-  //}
-  //.payment-method .container{
-  //  flex-direction: column;
-  //}
-  //.card-data .container{
-  //  flex-direction: column;
-  //}
-}
-
-@media (min-width: 992px) {
-  .form-container {
-    max-width: 960px;
+  .main-form {
+    padding: 32px 0;
+    box-sizing: border-box;
   }
-}
-@media (min-width: 1200px) {
-  .form-container {
-    max-width: 1140px;
-
+  .form-header{
+    flex-direction: column;
+  }
+  .first-area .container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .type-label{
+    margin: 24px 0;
+  }
+  .type-button{
+    padding: 45px 180px;
+  }
+  .type-img{
+    width: 240px;
+  }
+  .fourth-fifth{
+    flex-direction: column;
+  }
+  .payment-method .container{
+    flex-direction: column;
+  }
+  .card-data .container{
+    flex-direction: column;
   }
 }
 
+
+
+
+//@media (min-width: 768px) {
+//
+//  .form-container {
+//    max-width: 100%;
+//  }
+//}
+
+//@media (min-width: 992px) {
+//  .form-container {
+//    max-width: 960px;
+//  }
+//}
+//@media (min-width: 1200px) {
+//  .form-container {
+//    max-width: 1140px;
+//
+//  }
+//}
+//
