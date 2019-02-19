@@ -668,6 +668,12 @@ input[type="date"]:valid:before {
   .form-header{
     flex-direction: column;
   }
+  .order-nav{
+    flex-wrap: wrap;
+  }
+  .buttons {
+    flex-direction: row;
+  }
   .first-area .container{
     flex-direction: column;
     align-items: center;
@@ -679,7 +685,7 @@ input[type="date"]:valid:before {
     padding: 45px 180px;
   }
   .type-img{
-    width: 240px;
+    width: 140px;
   }
   .fourth-fifth{
     flex-direction: column;
@@ -695,22 +701,22 @@ input[type="date"]:valid:before {
 
 
 
-//@media (min-width: 768px) {
-//
-//  .form-container {
-//    max-width: 100%;
-//  }
-//}
+@media (min-width: 768px) {
 
-//@media (min-width: 992px) {
-//  .form-container {
-//    max-width: 960px;
-//  }
-//}
-//@media (min-width: 1200px) {
-//  .form-container {
-//    max-width: 1140px;
-//
-//  }
-//}
-//
+  .form-container {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .form-container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .form-container {
+    max-width: 1140px;
+
+  }
+}
+
