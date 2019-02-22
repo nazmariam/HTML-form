@@ -19,6 +19,8 @@ body{
   padding: 32px 73px;
   display: flex;
   justify-content: space-between;
+  max-width: 1140px;
+  margin: auto;
   .form-button{
     background-color: transparent;
     border-color: $mainColorLight;
@@ -348,7 +350,7 @@ fieldset{
   mask-image: url(../images/003-trash.svg);
   align-items: center;
   color: transparent;
-  &:focus{
+  &:focus, &:hover{
     background-color: $mainColor;
   }
 }
