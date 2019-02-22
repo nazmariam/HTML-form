@@ -245,6 +245,7 @@ fieldset{
   box-sizing: border-box;
   padding: 25px 89px;
 }
+
 .inp-type:checked ~ .fa-check-circle{
   display: inline;
   position: absolute;
@@ -446,7 +447,8 @@ fieldset{
   position: relative;
   -webkit-appearance: none;
   appearance: none;
-  margin: 24px 16px 16px 32px;
+  margin: 24px auto;
+  display: block;
 }
 .urgent::before {
   left: 0;
@@ -490,7 +492,7 @@ fieldset{
   display: flex;
   width: 90%;
   justify-content: space-between;
-  margin: 0 8px;
+  margin: 0 auto;
   color: #a4abc5;
   font-weight: 600;
   text-transform: uppercase;
@@ -548,6 +550,19 @@ fieldset{
 }
 .text, .email, .password{
   min-width: 300px;
+}
+.date{
+  max-width: 230px;
+  box-sizing: border-box;
+  &:focus{
+
+  }
+}
+.username{
+  width: 300px;
+}
+.username-label{
+  width: 100%;
 }
 .email:focus:invalid ~ .fa-window-close,
 .password:focus:invalid ~ .fa-window-close{
@@ -631,7 +646,6 @@ input::-webkit-input-placeholder{
 .card-number,
 .date {
   position: relative;
-  min-width: 100px;
   margin-top: 5px;
   height: 50px;
   padding: 5px 15px 5px 15px;
@@ -642,7 +656,7 @@ input::-webkit-input-placeholder{
   outline: transparent;
   background-color: transparent;
   color: $mainColor;
-  &:hover, :active{
+  &:hover, &:active{
     border: 1px solid $mainColor;
   }
   &:focus{
