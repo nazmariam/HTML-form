@@ -8,6 +8,7 @@ const rename = require('gulp-rename');
 function style() {
     return gulp.src('app/sass/main.scss')
         .pipe(sass())
+        .pipe(gulp.dest('dist/css'))
         .pipe(rename({
             suffix: '.min'
         }))
@@ -17,7 +18,7 @@ function style() {
 }
 function watch(){
     livereload.listen();
-    gulp.watch('app/sass/', style)
+    gulp.watch('app/sass/*.scss', style)
 }
 
 function images() {
