@@ -315,13 +315,8 @@ fieldset {
 
 .order-list {
   display: flex;
-<<<<<<< HEAD
   padding: 0 0 0 28px;
   justify-content: space-between; }
-=======
-  padding: 0;
-  justify-content: space-around; }
->>>>>>> 94629eefda07a659ca70e4676e5725eba8b9d960
 
 .order-item {
   display: flex;
@@ -1059,11 +1054,6 @@ footer {
     height: 16px; }
   .second-area {
     margin: 24px 0; }
-<<<<<<< HEAD
-=======
-  .to-lang .list-header {
-    padding-left: 0; }
->>>>>>> 94629eefda07a659ca70e4676e5725eba8b9d960
   .sel-but {
     display: inline-block; }
   .second-lang {
@@ -1076,11 +1066,7 @@ footer {
     margin: 0;
     display: inline-block; }
   .to-lang .list-header {
-<<<<<<< HEAD
     padding-left: 16px; }
-=======
-    padding-left: 20px; }
->>>>>>> 94629eefda07a659ca70e4676e5725eba8b9d960
   .fourth-fifth {
     flex-direction: column; }
   .fourth-area .container {
@@ -1150,7 +1136,6 @@ footer {
   .from-lang .list-header,
   .to-lang .list-header {
     width: 35px; }
-<<<<<<< HEAD
   .from-lang, .to-lang {
     margin: 0 0 0 -40px; }
   .second-lang .sel-but {
@@ -1195,14 +1180,6 @@ footer {
     width: 20%; }
   .date {
     max-width: 100%; } }
-=======
-  .second-lang .sel-but {
-    margin-left: 23px; }
-  .order-list {
-    flex-wrap: wrap; }
-  .order-item {
-    margin: 0 16px; } }
->>>>>>> 94629eefda07a659ca70e4676e5725eba8b9d960
 
 @media only screen and (max-width: 520px) {
   .header-container {
@@ -1214,7 +1191,6 @@ footer {
     flex-wrap: wrap; }
   .third-area .container {
     padding: 16px 4px; }
-<<<<<<< HEAD
   .from-lang, .to-lang {
     margin: 0; }
   .to-lang .list-header {
@@ -1225,15 +1201,6 @@ footer {
     margin-left: 40px;
     margin-right: 0;
     width: 80%; }
-=======
-  .second-lang {
-    margin: 0; }
-  .second-lang-block {
-    flex-direction: row-reverse;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
->>>>>>> 94629eefda07a659ca70e4676e5725eba8b9d960
   .fourth-area .container {
     padding: 8px 16px; }
   .signin {
@@ -1242,7 +1209,6 @@ footer {
     padding: 4px; }
   .username, .email-address, .users-password {
     margin: 4px; }
-<<<<<<< HEAD
   .add, .from-lang, .first-lang-block, .second-lang-block {
     text-align: left; }
   .add {
@@ -1270,16 +1236,6 @@ footer {
     position: absolute;
     right: 10px;
     top: 18px; } }
-=======
-  .title-number {
-    padding: 5px 12px; }
-  .main-title {
-    margin: 32px 4px; }
-  .add, .from-lang, .first-lang-block, .second-lang-block {
-    display: flex; }
-  .second-lang .sel-but {
-    margin-left: 8px; } }
->>>>>>> 94629eefda07a659ca70e4676e5725eba8b9d960
 
 @media (min-width: 768px) {
   .form-container {
